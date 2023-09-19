@@ -54,12 +54,12 @@ const sumMinimums = (arr) => {
 // console.log(sumMinimums([2, 3, 45, 6, 4, 5]))
 
 const sumLowest = (arr1, arr2, arr3) => {
-    const getLowest = function(a,b){return a -b }
-    let sortArr1 = arr1.sort(getLowest);
+    const sortArr = function(a,b){return a -b }
+    let sortArr1 = arr1.sort(sortArr);
     let lowestArr1 = sortArr1[0];
-    let sortArr2 = arr2.sort(getLowest);
+    let sortArr2 = arr2.sort(sortArr);
     let lowestArr2 = sortArr2[0];
-    let sortArr3 = arr3.sort(getLowest);
+    let sortArr3 = arr3.sort(sortArr);
     let lowestArr3 = sortArr3[0];
     
     return lowestArr1 + lowestArr2 + lowestArr3;
